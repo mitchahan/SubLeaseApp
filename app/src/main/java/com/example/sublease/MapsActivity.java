@@ -16,6 +16,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -50,14 +51,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
+
         // Add a marker in Sydney and move the camera
 
 
-        LatLng northPole = new LatLng(50, 100);
-        LatLng santaClara = new LatLng(37.345701, -121.941155);
-        mMap.addMarker(new MarkerOptions().position(santaClara).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(santaClara));
-        moveToCurrentLocation(santaClara);
+        LatLng santaClara0 = new LatLng(37.345464, -121.940525);
+        LatLng santaClara1 = new LatLng(37.345701, -121.941155);
+        LatLng santaClara2 = new LatLng(37.346197, -121.939502);
+        Marker TopGun =  mMap.addMarker(new MarkerOptions().position(santaClara0).title("516 Lafayette St\nSanta Clara, CA 95053").snippet("$1200/mo"));
+        Marker mk2 = mMap.addMarker(new MarkerOptions().position(santaClara1).title("321 Lolipop Rd").snippet("$1000/mo"));
+        Marker mk3 = mMap.addMarker(new MarkerOptions().position(santaClara2).title("654 CS lane").snippet("$700/mo"));
+        TopGun.showInfoWindow();
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(santaClara0));
+        moveToCurrentLocation(santaClara0);
+
+
+
+        
     }
 
 

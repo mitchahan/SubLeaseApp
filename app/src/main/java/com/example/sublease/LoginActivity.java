@@ -1,5 +1,6 @@
 package com.example.sublease;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -14,6 +15,11 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button buttonRegister;
@@ -22,7 +28,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView textViewSignup;
     private TextView textViewSignin;
 
-    private ProgressBar progressBar;
+    private ProgressDialog progressDialog;
+
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -30,8 +38,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        proggressBar = new ProgressBar(this);
+        firebaseAuth = FirebaseAuth.getInstance();
 
+        progressDialog = new ProgressDialog(this);
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
 
@@ -64,7 +73,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //If entries are valid we go here!! :)
         //WE FIRST SHOW PROGRESS BAR
 
-        progressBar
+        progressDialog.setMessage("Registering User...");
+        progressDialog.show();
+
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            //user is successfully registered!!
+                            //we will start the profile activity here
+                            Toast.makeText(LoginActivity.this, "Yo Registered Successfully!", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            Toast.makeText(LoginActivity.this, "Registration Unsuccessful. Please try again.", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
     }
 
     @Override

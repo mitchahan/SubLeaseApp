@@ -1,4 +1,4 @@
-package com.example.sublease;
+/*package com.example.sublease;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -107,3 +107,4 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 }
+*/

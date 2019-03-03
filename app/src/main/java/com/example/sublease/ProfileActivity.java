@@ -1,4 +1,4 @@
-package com.example.sublease;
+/*package com.example.sublease;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -203,3 +203,4 @@ public class ProfileActivity extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "Select Profile Image"), CHOOSE_IMAGE);
     }
 }
+*/

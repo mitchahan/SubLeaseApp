@@ -17,7 +17,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Intent intent = new Intent(getActivity(), MapsActivity.class);
+        //Intent intent = new Intent(getActivity(), MapsActivity.class);
         //startActivity(intent);
         return inflater.inflate(R.layout.fragment_home, null);
     }

@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="accountPrimary">#3F51B5</color>
+    <color name="accountPrimaryDark">#292b3d</color>
+    <color name="greyLight">#fafafa</color>
+    <color name="accountAccent">#FF4081</color>
+    <color name="startBlue">#09c6df</color>
+    <color name="endBlue">#0bcce6</color>
 </resources>

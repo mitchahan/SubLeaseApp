@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,11 +22,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView textViewSignup;
     private TextView textViewSignin;
 
+    private ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        proggressBar = new ProgressBar(this);
+
 
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
 
@@ -54,6 +60,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             //stopping funct execution further
             return;
         }
+
+        //If entries are valid we go here!! :)
+        //WE FIRST SHOW PROGRESS BAR
+
+        progressBar
     }
 
     @Override

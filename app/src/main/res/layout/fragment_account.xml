@@ -22,6 +22,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:src="@drawable/ic_account_circle_black_24dp"/>
             <TextView
                 android:layout_marginTop="10dp"
@@ -43,28 +44,26 @@
                 android:background="#fff"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="3">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="match_parent">
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="3"
+                >
                     <TextView
+                        android:layout_marginTop="30dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Photos"
+                        android:layout_gravity="center"
+                        android:text="Lease Offers"
                         android:textSize="20sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="125"
+                        android:layout_gravity="center"
+                        android:text="2"
                         android:textStyle="bold"
                         android:textSize="20sp"
                         android:paddingTop="10dp"
                         android:textColor="@color/startBlue"/>
-                </LinearLayout>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -77,15 +76,34 @@
         android:layout_gravity="center"
         android:layout_marginTop="45dp"
         >
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_email_black_24dp"/>
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="lancen@scu.edu"/>
+        </LinearLayout>
     </LinearLayout>
-    <TextView
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TextView"/>
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Create Lease"
+            />
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -55,7 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         LatLng northPole = new LatLng(50, 100);
         LatLng santaClara = new LatLng(37.345701, -121.941155);
-        mMap.addMarker(new MarkerOptions().position(santaClara).title("Marker in Sydney"));
+        mMap.addMarker(new MarkerOptions().position(santaClara).title("Marker in Santa Clara"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(santaClara));
         moveToCurrentLocation(santaClara);
     }

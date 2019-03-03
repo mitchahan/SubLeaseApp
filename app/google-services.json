@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "141430824945",
+    "firebase_url": "https://subleasescu.firebaseio.com",
+    "project_id": "subleasescu",
+    "storage_bucket": "subleasescu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141430824945:android:0bde357064672d6c",
+        "android_client_info": {
+          "package_name": "com.example.sublease"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "141430824945-7ndspe30vedki4jevoqkq127pb6f4j8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcwu1o6MU2VqK3IUbHESYNzhT3eTLXqeg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
